@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-from models.manager import ProjectManager
+from models import ProjectManager
 
 def main():
     parser = argparse.ArgumentParser(description="Project Management CLI Tool")

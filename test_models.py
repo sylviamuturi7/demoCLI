@@ -2,11 +2,15 @@
 
 import unittest
 import os
-from models.manager import ProjectManager
+from models import ProjectManager
 
 class TestProjectManager(unittest.TestCase):
     def setUp(self):
         self.pm = ProjectManager()
+        # Clear any existing data for clean tests
+        self.pm.users.clear()
+        self.pm.projects.clear()
+        self.pm.tasks.clear()
     
     def test_add_user(self):
         result = self.pm.add_user("Alice", "alice@example.com")

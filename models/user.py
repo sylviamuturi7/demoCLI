@@ -39,5 +39,5 @@ class User(Person):
     def from_dict(cls, data):
         user = User(data["name"], data["email"])
         user.projects = data.get("projects", [])
-        user._id = data.get("id", 0)
+        user._id = data.get("id", Person.total_people)
         return user
